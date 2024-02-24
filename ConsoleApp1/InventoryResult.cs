@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace Shop
 {
     public class InventoryResult
     {

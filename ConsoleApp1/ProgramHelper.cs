@@ -1,7 +1,6 @@
-﻿using ConsoleApp1.Data;
-using System.Xml.Linq;
+﻿using Shop.Data;
 
-namespace ConsoleApp1
+namespace Shop
 {
     public class ProgramHelper
     {
@@ -43,7 +42,7 @@ namespace ConsoleApp1
                 {
                     name = Console.ReadLine();
 
-                    if(name == "exit")
+                    if (name == "exit")
                     {
                         exit = true;
 
@@ -146,7 +145,7 @@ namespace ConsoleApp1
 
             return InventoryResult.Completed(id);
         }
-        public bool ValidateGuid(InventoryResult <string> serviceId)
+        public bool ValidateGuid(InventoryResult<string> serviceId)
         {
             if (!Guid.TryParse(serviceId.Data, out var _))
             {
@@ -161,7 +160,7 @@ namespace ConsoleApp1
 
         public bool IsFailedOperation(InventoryResult inventoryResult)
         {
-            if(!inventoryResult.Succeseeded)
+            if (!inventoryResult.Succeseeded)
             {
                 Console.WriteLine("\n" + inventoryResult.ErrorMessage + "\n");
 

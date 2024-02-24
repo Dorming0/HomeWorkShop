@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Data
+﻿namespace Shop.Data
 {
     public class Inventory
     {
@@ -30,7 +30,7 @@
 
         public InventoryResult AddServiceCount(Guid id, int count)
         {
-            if(id == default)
+            if (id == default)
                 throw new ArgumentNullException(nameof(id));
 
             var currentService = Services.FirstOrDefault(x => x.Id == id);

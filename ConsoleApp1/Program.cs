@@ -1,7 +1,5 @@
-﻿
-
-using ConsoleApp1;
-using ConsoleApp1.Data;
+﻿using Shop;
+using Shop.Data;
 
 ProgramHelper helper = new ProgramHelper();
 Inventory inventory = new Inventory();

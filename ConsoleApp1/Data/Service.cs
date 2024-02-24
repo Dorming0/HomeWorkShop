@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Data
+﻿namespace Shop.Data
 {
     public class Service
     {
@@ -11,9 +11,9 @@
         {
             if (price <= 0m)
                 throw new ArgumentException("incorrect input price");
-            if(count <= 0)
+            if (count <= 0)
                 throw new ArgumentException("incorrect input count");
-            if(string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException(nameof(name));
 
             Id = Guid.NewGuid();
